@@ -1,6 +1,6 @@
-import styles from "./preview-case.module.css"
-import { Button } from "../button/button.component"
-import clsx from "clsx"
+import styles from "./preview-case.module.css";
+import { Button } from "../button/button.component";
+import clsx from "clsx";
 
 export function PreviewCase({
   title,
@@ -11,13 +11,13 @@ export function PreviewCase({
   address,
   className,
 }: {
-  title?: string
-  image?: string
-  application?: string
-  parameter?: string
-  equipment?: string
-  address?: string
-  className?: string
+  title?: string;
+  image?: string;
+  application?: string;
+  parameter?: string;
+  equipment?: string;
+  address?: string;
+  className?: string;
 }) {
   return (
     <div className={clsx(styles.defaultRootClass, className)}>
@@ -30,30 +30,30 @@ export function PreviewCase({
       </div>
 
       <div className={styles.caseInfo}>
-        <h2>{title}</h2>
+        <h2 className={styles.title}>{title}</h2>
 
         <div className={styles.data}>
           <span>Application</span>
-          <p>{application}</p>
+          <p className={styles.desc}>{application}</p>
         </div>
 
         <div className={`${styles.data} ${styles.parameter}`}>
           <span>Parameter</span>
-          <p>{parameter}</p>
+          <p className={styles.desc}>{parameter}</p>
         </div>
 
         <div className={styles.data}>
           <span>Equipment</span>
-          <p>{equipment}</p>
+          <p className={styles.desc}>{equipment}</p>
         </div>
 
         <div className={`${styles.data} ${styles.address}`}>
           <span>Address</span>
-          <p>{address}</p>
+          <p className={styles.desc}>{address}</p>
         </div>
 
         <Button title="VIEW MORE" className={styles.headerCaseButton} />
       </div>
     </div>
-  )
+  );
 }

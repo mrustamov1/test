@@ -69,24 +69,23 @@
   height: 100vh;
 }
 
-.caseInfo {
-  padding: 3rem;
-}
-
-.caseInfo h2 {
-  font-size: 1rem;
+.title {
+  font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.5;
   color: #3f3f3f;
   padding-bottom: 1.5rem;
 }
 
-.reverse {
-  flex-direction: row-reverse;
+.desc {
+  font-size: clamp(0.8rem, 2vw, 0.85rem);
+}
+
+.caseInfo {
+  padding: 3rem;
 }
 
 .defaultRootClass {
   display: flex;
-  align-items: center;
 }
 
 .data {
@@ -116,16 +115,15 @@
 }
 
 @media (max-width: 1024px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
   .default {
     max-width: 100%;
   }
 
   .caseInfo {
-    padding: 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .defaultRootClass {
+    flex-direction: column;
   }
 }

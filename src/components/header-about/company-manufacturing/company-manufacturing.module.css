@@ -7,8 +7,8 @@
 }
 
 .container h2 {
-  font-size: 2rem;
-  line-height: 2.5;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.5;
   font-weight: 600;
 }
 
@@ -16,7 +16,7 @@
   font-weight: 600;
   line-height: 1.5;
   color: #3f3f3f;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 4vw, 0.9rem);
 }
 .photos {
   display: grid;

@@ -24,3 +24,8 @@
   margin-top: 0.5rem;
 }
 
+@media (max-width: 435px) {
+  .sidebar {
+    min-width: 300px;
+  }
+}

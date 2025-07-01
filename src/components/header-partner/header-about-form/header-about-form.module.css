@@ -117,7 +117,7 @@
 }
 
 .requestInfoTitle {
-  font-size: 1.9rem;
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
   padding: 1rem 0;
   font-weight: 600;
 }
