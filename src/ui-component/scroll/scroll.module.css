@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.scrollContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.phoneScroll {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}

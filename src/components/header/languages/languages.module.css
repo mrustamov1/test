@@ -1,0 +1,32 @@
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.77rem;
+  margin-top: 1rem;
+  transition: all 0.5s linear;
+  width: 100%;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.lang:first-child {
+  margin: 0;
+}
+
+.lang:hover {
+  width: 100%;
+  border-bottom: 2px solid var(--gen);
+  color: var(--gen);
+}
+
+.langImg {
+  width: 33px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.activeLang {
+  color: var(--gen);
+  font-weight: 600;
+}

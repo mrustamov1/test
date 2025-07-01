@@ -1,0 +1,25 @@
+.products {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to next line */
+    overflow-x: auto; /* Enable horizontal scroll */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    gap: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    padding: 2rem 0 0 0;
+  }
+  
+  .cases {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+  

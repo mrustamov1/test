@@ -1,0 +1,77 @@
+import { images } from "../../assets/images"
+
+export const newsData = [
+  {
+    id: "1",
+    title: "Huijue Group helps...",
+    description:
+      "On May 21, 2025, during the Grain Full season, the Qingcun Town...",
+    image: images.news,
+    date: "2025-05-23",
+    fullText: `Full details of the news go here. This can be rich text.`,
+  },
+  {
+    id: "2",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+  {
+    id: "3",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+  {
+    id: "4",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+  {
+    id: "5",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+  {
+    id: "6",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+  {
+    id: "7",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+  {
+    id: "8",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+  {
+    id: "9",
+    title: "Another news item...",
+    description: "Short summary here...",
+    image: images.news,
+    date: "2025-05-24",
+    fullText: `Another detailed news content here.`,
+  },
+]

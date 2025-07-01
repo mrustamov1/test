@@ -1,0 +1,54 @@
+.main {
+  background-image: url("../../assets/images/product-b.webp");
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+.simple {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 5rem 1rem;
+  gap: 0.5rem;
+}
+
+.desc {
+  max-width: 700px;
+  width: 100%;
+  line-height: 1.3;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1200px) {
+  .simple {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .desc {
+    max-width: 600px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .desc {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-bottom: 3rem;
+  }
+  .simple {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

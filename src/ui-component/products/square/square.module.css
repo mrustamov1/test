@@ -1,0 +1,98 @@
+.content {
+  flex: 0 0 calc((100% - 10px) / 3);
+}
+
+.default {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  max-height: 400px;
+  height: 100vh;
+}
+
+.default:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: #fff;
+  gap: 20px;
+}
+
+.overlayTitle {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.5s ease;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.overlayButton {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.default:hover .overlay {
+  opacity: 1;
+}
+
+.default:hover .overlayTitle {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.default:hover .overlayButton {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cardImage {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.default:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #000000ad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 1;
+  padding: 1rem 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex: 0 0 100%;
+  }
+
+  .default {
+    height: auto;
+    max-height: none;
+  }
+}

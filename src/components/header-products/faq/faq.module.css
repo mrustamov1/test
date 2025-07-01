@@ -1,0 +1,49 @@
+.faq {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 15px;
+  margin-top: 1rem;
+  border-radius: 12px;
+  display: flex;
+  padding: 1rem;
+}
+
+.headerFaq {
+  background-color: var(--gen);
+  width: 100%;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.active {
+  transform: rotate(90deg);
+  transition: all 0.3s linear;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #3f3f3f;
+  text-align: left;
+}
+
+.titleAndIcon {
+  border-left: 4px solid var(--gen);
+  padding: 1rem;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.details {
+  border-bottom: 1px solid #ddd;
+}
+
+.desc {
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  line-height: 1.5;
+}
