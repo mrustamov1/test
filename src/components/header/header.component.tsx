@@ -157,7 +157,12 @@ export function Header() {
               </ul>
             </nav>
           ) : (
-            <img className={styles.logo} src={images.logo} alt="Logo" />
+            <img
+              className={styles.logo}
+              src={images.logo}
+              alt="Logo"
+              onClick={() => navigate("/")}
+            />
           )}
 
           {/* --------------------------------------------------------------------------- */}
