@@ -54,106 +54,85 @@ export function Header() {
           {isSmall ? (
             <nav className={styles.nav}>
               <ul className={styles.menu}>
-                {/* Dropdown Toggle: Solution */}
-                <li className={styles.linkWrapper}>
-                  <div
-                    onClick={() => handleDropdownToggle("solution")}
-                    className={styles.link}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    {translate("header.solution")}
-                    <Icon
-                      name="fa-light fa-chevron-down"
-                      className={`${styles.icon} ${
-                        isActiveDropdown === "solution" ? styles.rotate : ""
-                      }`}
-                      size="tiny"
-                    />
-                  </div>
-                </li>
+                <div
+                  onClick={() => handleDropdownToggle("solution")}
+                  className={styles.link}
+                  role="button"
+                  tabIndex={0}
+                >
+                  {translate("header.solution")}
+                  <Icon
+                    name="fa-light fa-chevron-down"
+                    className={`${styles.icon} ${
+                      isActiveDropdown === "solution" ? styles.rotate : ""
+                    }`}
+                    size="tiny"
+                  />
+                </div>
 
-                {/* Dropdown Toggle: Products */}
-                <li className={styles.linkWrapper}>
-                  <div
-                    onClick={() => handleDropdownToggle("products")}
-                    className={styles.link}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    {translate("header.products")}
-                    <Icon
-                      name="fa-light fa-chevron-down"
-                      className={`${styles.icon} ${
-                        isActiveDropdown === "products" ? styles.rotate : ""
-                      }`}
-                      size="tiny"
-                    />
-                  </div>
-                </li>
+                <div
+                  onClick={() => handleDropdownToggle("products")}
+                  className={styles.link}
+                  role="button"
+                  tabIndex={0}
+                >
+                  {translate("header.products")}
+                  <Icon
+                    name="fa-light fa-chevron-down"
+                    className={`${styles.icon} ${
+                      isActiveDropdown === "products" ? styles.rotate : ""
+                    }`}
+                    size="tiny"
+                  />
+                </div>
 
-                {/* Normal Link: Case */}
-                <li className={styles.linkWrapper}>
-                  <NavLink
-                    to="/header-case"
-                    className={styles.link}
-                    onClick={() => setIsActiveDropdown(false)}
-                  >
-                    {translate("header.case")}
-                  </NavLink>
-                </li>
+                <NavLink
+                  to="/header-case"
+                  className={styles.link}
+                  onClick={() => setIsActiveDropdown(false)}
+                >
+                  {translate("header.case")}
+                </NavLink>
 
-                {/* Dropdown Toggle: About */}
-                <li className={styles.linkWrapper}>
-                  <div
-                    onClick={() => handleDropdownToggle("about")}
-                    className={styles.link}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    {translate("header.about")}
-                    <Icon
-                      name="fa-light fa-chevron-down"
-                      className={`${styles.icon} ${
-                        isActiveDropdown === "about" ? styles.rotate : ""
-                      }`}
-                      size="tiny"
-                    />
-                  </div>
-                </li>
+                <div
+                  onClick={() => handleDropdownToggle("about")}
+                  className={styles.link}
+                  role="button"
+                  tabIndex={0}
+                >
+                  {translate("header.about")}
+                  <Icon
+                    name="fa-light fa-chevron-down"
+                    className={`${styles.icon} ${
+                      isActiveDropdown === "about" ? styles.rotate : ""
+                    }`}
+                    size="tiny"
+                  />
+                </div>
 
-                {/* Normal Link: Customization */}
-                <li className={styles.linkWrapper}>
-                  <NavLink
-                    to="/customization"
-                    className={styles.link}
-                    onClick={() => setIsActiveDropdown(false)}
-                  >
-                    {translate("header.customization")}
-                  </NavLink>
-                </li>
+                <NavLink
+                  to="/customization"
+                  className={styles.link}
+                  onClick={() => setIsActiveDropdown(false)}
+                >
+                  {translate("header.customization")}
+                </NavLink>
 
-                {/* Normal Link: Services */}
-                <li className={styles.linkWrapper}>
-                  <NavLink
-                    to="/services"
-                    className={styles.link}
-                    onClick={() => setIsActiveDropdown(false)}
-                  >
-                    {translate("header.services")}
-                  </NavLink>
-                </li>
+                <NavLink
+                  to="/services"
+                  className={styles.link}
+                  onClick={() => setIsActiveDropdown(false)}
+                >
+                  {translate("header.services")}
+                </NavLink>
 
-                {/* Normal Link: Contact */}
-                <li className={styles.linkWrapper}>
-                  <NavLink
-                    to="/contact"
-                    className={styles.link}
-                    onClick={() => setIsActiveDropdown(false)}
-                  >
-                    {translate("header.contact")}
-                  </NavLink>
-                </li>
+                <NavLink
+                  to="/contact"
+                  className={styles.link}
+                  onClick={() => setIsActiveDropdown(false)}
+                >
+                  {translate("header.contact")}
+                </NavLink>
               </ul>
             </nav>
           ) : (
