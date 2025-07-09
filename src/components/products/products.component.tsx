@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom"
-import styles from "./products.module.css"
-import { images } from "../../assets/images"
-import { useTranslation } from "react-i18next"
-import { Button } from "../../ui-component/button/button.component"
-import { Simple } from "../../ui-component/products/simple/simple.component"
-import { Container } from "../../ui-component/container/container.component"
+import { Link } from "react-router-dom";
+import styles from "./products.module.css";
+import { images } from "../../assets/images";
+import { useTranslation } from "react-i18next";
+import { Button } from "../../ui-component/button/button.component";
+import { Simple } from "../../ui-component/products/simple/simple.component";
+import { Container } from "../../ui-component/container/container.component";
 
 export function Products() {
   // ---------------------------------------------------------------------------
   // variables
   // ---------------------------------------------------------------------------
-  const { t: translate } = useTranslation()
+  const { t: translate } = useTranslation();
   const data = [
     {
       id: "1",
@@ -36,7 +36,7 @@ export function Products() {
       title: translate("products.first-card-title"),
       icon: "fa-light fa-arrow-right-long",
     },
-  ]
+  ];
 
   // ---------------------------------------------------------------------------
   return (
@@ -58,7 +58,11 @@ export function Products() {
         {/* --------------------------------------------------------------------------- */}
         <div className={styles.simple}>
           {data.map((product) => (
-            <Link key={product.id} to={`/preview/products/${product.id}`}>
+            <Link
+              className={styles.link}
+              key={product.id}
+              to={`/preview/products/${product.id}`}
+            >
               <Simple
                 photo={product.photo}
                 title={product.title}
@@ -69,5 +73,5 @@ export function Products() {
         </div>
       </Container>
     </section>
-  )
+  );
 }

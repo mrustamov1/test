@@ -1,7 +1,8 @@
-import { useRef, type ReactNode } from "react"
 import styles from "./scroll.module.css"
+import { useRef, type ReactNode } from "react"
 import { Button } from "../button/button.component"
 import { useResize } from "../../context/dimension.context"
+import { Container } from "../container/container.component"
 
 export function Scroll({ children }: { children?: ReactNode }) {
   const scrollRef = useRef<HTMLDivElement | null>(null)
@@ -21,7 +22,7 @@ export function Scroll({ children }: { children?: ReactNode }) {
 
   return (
     <div>
-      <div className={styles.main}>
+      <Container className={styles.main}>
         {isTablet && (
           <Button
             style={{ padding: 0 }}
@@ -39,7 +40,7 @@ export function Scroll({ children }: { children?: ReactNode }) {
             iconName="fa-solid fa-chevron-right"
           />
         )}
-      </div>
+      </Container>
       {isPhone && (
         <div className={styles.phoneScroll}>
           <Button

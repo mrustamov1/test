@@ -1,38 +1,38 @@
-import { useState } from "react"
-import styles from "./header.module.css"
-import { images } from "../../assets/images"
-import { useTranslation } from "react-i18next"
-import { About } from "./about/about.component"
-import { Search } from "./search/search.component"
-import { NavLink, useNavigate } from "react-router-dom"
-import { Solution } from "./solution/solution.component"
-import { Products } from "./products/products.component"
-import { useResize } from "../../context/dimension.context"
-import { Languages } from "./languages/languages.component"
-import { useLanguage } from "../../context/language.context"
-import { Icon } from "../../ui-component/icon/icon.component"
-import { MobileMenu } from "./mobile-menu/mobile-menu.component"
-import { Button } from "../../ui-component/button/button.component"
-import { Container } from "../../ui-component/container/container.component"
+import { useState } from "react";
+import styles from "./header.module.css";
+import { images } from "../../assets/images";
+import { useTranslation } from "react-i18next";
+import { About } from "./about/about.component";
+import { Search } from "./search/search.component";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Solution } from "./solution/solution.component";
+import { Products } from "./products/products.component";
+import { useResize } from "../../context/dimension.context";
+import { Languages } from "./languages/languages.component";
+import { useLanguage } from "../../context/language.context";
+import { Icon } from "../../ui-component/icon/icon.component";
+import { MobileMenu } from "./mobile-menu/mobile-menu.component";
+import { Button } from "../../ui-component/button/button.component";
+import { Container } from "../../ui-component/container/container.component";
 
 export function Header() {
   // ---------------------------------------------------------------------------
   // variables
   // ---------------------------------------------------------------------------
-  const navigate = useNavigate()
-  const { isSmall } = useResize()
-  const { activeLang } = useLanguage()
-  const { t: translate } = useTranslation()
-  const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate();
+  const { isSmall } = useResize();
+  const { activeLang } = useLanguage();
+  const { t: translate } = useTranslation();
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isActiveDropdown, setIsActiveDropdown] = useState<string | false>(
-    false,
-  )
+    false
+  );
 
   // ---------------------------------------------------------------------------
   // functions
   // ---------------------------------------------------------------------------
   function handleDropdownToggle(menu: string) {
-    setIsActiveDropdown((prev) => (prev === menu ? false : menu))
+    setIsActiveDropdown((prev) => (prev === menu ? false : menu));
   }
   // ---------------------------------------------------------------------------
   return (
@@ -54,61 +54,106 @@ export function Header() {
           {isSmall ? (
             <nav className={styles.nav}>
               <ul className={styles.menu}>
-                <NavLink
-                  to={"/"}
-                  onClick={() => handleDropdownToggle("solution")}
-                  className={styles.link}
-                >
-                  {translate("header.solution")}
-                  <Icon
-                    name="fa-light fa-chevron-down"
-                    className={`${styles.icon} ${
-                      isActiveDropdown === "solution" ? styles.rotate : ""
-                    }`}
-                    size="tiny"
-                  />
-                </NavLink>
-                <NavLink
-                  to={"/"}
-                  onClick={() => handleDropdownToggle("products")}
-                  className={styles.link}
-                >
-                  {translate("header.products")}
-                  <Icon
-                    name="fa-light fa-chevron-down"
-                    className={`${styles.icon} ${
-                      isActiveDropdown === "products" ? styles.rotate : ""
-                    }`}
-                    size="tiny"
-                  />
-                </NavLink>
-                <NavLink to={"/header-case"} className={styles.link}>
-                  {translate("header.case")}
-                </NavLink>
-                <NavLink
-                  to={"/"}
-                  onClick={() => handleDropdownToggle("about")}
-                  className={styles.link}
-                >
-                  {translate("header.about")}
-                  <Icon
-                    name="fa-light fa-chevron-down"
-                    className={`${styles.icon} ${
-                      isActiveDropdown === "about" ? styles.rotate : ""
-                    }`}
-                    size="tiny"
-                  />
-                </NavLink>
-                <NavLink to={"/customization"} className={styles.link}>
-                  {translate("header.customization")}
-                </NavLink>
+                {/* Dropdown Toggle: Solution */}
+                <li className={styles.linkWrapper}>
+                  <div
+                    onClick={() => handleDropdownToggle("solution")}
+                    className={styles.link}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    {translate("header.solution")}
+                    <Icon
+                      name="fa-light fa-chevron-down"
+                      className={`${styles.icon} ${
+                        isActiveDropdown === "solution" ? styles.rotate : ""
+                      }`}
+                      size="tiny"
+                    />
+                  </div>
+                </li>
 
-                <NavLink to={"/services"} className={styles.link}>
-                  {translate("header.services")}
-                </NavLink>
-                <NavLink to={"/contact"} className={styles.link}>
-                  {translate("header.contact")}
-                </NavLink>
+                {/* Dropdown Toggle: Products */}
+                <li className={styles.linkWrapper}>
+                  <div
+                    onClick={() => handleDropdownToggle("products")}
+                    className={styles.link}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    {translate("header.products")}
+                    <Icon
+                      name="fa-light fa-chevron-down"
+                      className={`${styles.icon} ${
+                        isActiveDropdown === "products" ? styles.rotate : ""
+                      }`}
+                      size="tiny"
+                    />
+                  </div>
+                </li>
+
+                {/* Normal Link: Case */}
+                <li className={styles.linkWrapper}>
+                  <NavLink
+                    to="/header-case"
+                    className={styles.link}
+                    onClick={() => setIsActiveDropdown(false)}
+                  >
+                    {translate("header.case")}
+                  </NavLink>
+                </li>
+
+                {/* Dropdown Toggle: About */}
+                <li className={styles.linkWrapper}>
+                  <div
+                    onClick={() => handleDropdownToggle("about")}
+                    className={styles.link}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    {translate("header.about")}
+                    <Icon
+                      name="fa-light fa-chevron-down"
+                      className={`${styles.icon} ${
+                        isActiveDropdown === "about" ? styles.rotate : ""
+                      }`}
+                      size="tiny"
+                    />
+                  </div>
+                </li>
+
+                {/* Normal Link: Customization */}
+                <li className={styles.linkWrapper}>
+                  <NavLink
+                    to="/customization"
+                    className={styles.link}
+                    onClick={() => setIsActiveDropdown(false)}
+                  >
+                    {translate("header.customization")}
+                  </NavLink>
+                </li>
+
+                {/* Normal Link: Services */}
+                <li className={styles.linkWrapper}>
+                  <NavLink
+                    to="/services"
+                    className={styles.link}
+                    onClick={() => setIsActiveDropdown(false)}
+                  >
+                    {translate("header.services")}
+                  </NavLink>
+                </li>
+
+                {/* Normal Link: Contact */}
+                <li className={styles.linkWrapper}>
+                  <NavLink
+                    to="/contact"
+                    className={styles.link}
+                    onClick={() => setIsActiveDropdown(false)}
+                  >
+                    {translate("header.contact")}
+                  </NavLink>
+                </li>
               </ul>
             </nav>
           ) : (
@@ -207,5 +252,5 @@ export function Header() {
         </div>
       )}
     </>
-  )
+  );
 }

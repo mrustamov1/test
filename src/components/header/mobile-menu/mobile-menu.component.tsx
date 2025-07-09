@@ -1,75 +1,68 @@
-import { useState } from "react"
-import styles from "./mobile-menu.module.css"
-import { useNavigate } from "react-router-dom"
-import { About } from "../about/about.component"
-import { menuData } from "./mobile-menu.data.component"
-import { Solution } from "../solution/solution.component"
-import { Products } from "../products/products.component"
-import { FormAndLang } from "./form-lang/form-lang.component"
-import type { mobileMenuType } from "../../../types/menu.type"
-import { Icon } from "../../../ui-component/icon/icon.component"
-import { HeaderCase } from "../../header-case/header-case.component"
-import { Customization } from "../../customization/customization.component"
+import { useState } from "react";
+import styles from "./mobile-menu.module.css";
+import { useNavigate } from "react-router-dom";
+import { About } from "../about/about.component";
+import { menuData } from "./mobile-menu.data.component";
+import { Solution } from "../solution/solution.component";
+import { Products } from "../products/products.component";
+import { FormAndLang } from "./form-lang/form-lang.component";
+import type { mobileMenuType } from "../../../types/menu.type";
+import { Icon } from "../../../ui-component/icon/icon.component";
+import { HeaderCase } from "../../header-case/header-case.component";
+import { Customization } from "../../customization/customization.component";
 
 export function MobileMenu({ isOpen, onClose }: mobileMenuType) {
   // ---------------------------------------------------------------------------
   // variables
   // ---------------------------------------------------------------------------
-  const navigate = useNavigate()
-  const [openKey, setOpenKey] = useState<string | null>(null)
+  const navigate = useNavigate();
+  const [openKey, setOpenKey] = useState<string | null>(null);
 
   // ---------------------------------------------------------------------------
   // functions
   // ---------------------------------------------------------------------------
+  function toggleSubmenu(key: string | undefined) {
+    setOpenKey((prevKey) => (prevKey === key ? null : key ?? null));
+  }
 
-  function toggleSubmenu(key: string) {
-    setOpenKey((prevKey) => (prevKey === key ? null : key))
+  function handleMenuClick(key: string | undefined, hasSubmenu: boolean) {
+    if (!key) return;
+    if (hasSubmenu) {
+      toggleSubmenu(key);
+      return;
+    }
+
+    const routes: Record<string, string> = {
+      Case: "/header-case",
+      Customization: "/customization",
+      Services: "/services",
+      Contact: "/contact",
+    };
+
+    if (routes[key]) {
+      navigate(routes[key]);
+      onClose();
+    }
   }
 
   function renderSubmenu(key: string) {
     switch (key) {
       case "Solutions":
-        return <Solution onCloseDropdown={() => {}} />
+        return <Solution onCloseDropdown={onClose} />;
       case "Products":
-        return <Products onCloseDropdown={() => {}} />
-      case "Case":
-        return <HeaderCase />
+        return <Products onCloseDropdown={onClose} />;
       case "About":
-        return <About onCloseDropdown={() => {}} />
-      case "Customization":
-        return <Customization />
-      default:
-        return null
-    }
-  }
-
-  function handleMenuClick(key: string, hasSubmenu: boolean) {
-    if (hasSubmenu) {
-      toggleSubmenu(key)
-      return
-    }
-
-    switch (key) {
+        return <About onCloseDropdown={onClose} />;
       case "Case":
-        navigate("/header-case")
-        break
+        return <HeaderCase />;
       case "Customization":
-        navigate("/customization")
-        break
-      case "Services":
-        navigate("/services")
-        break
-      case "Contact":
-        navigate("/contact")
-        break
+        return <Customization />;
       default:
-        break
+        return null;
     }
-
-    onClose()
   }
 
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   // ---------------------------------------------------------------------------
   return (
@@ -81,13 +74,13 @@ export function MobileMenu({ isOpen, onClose }: mobileMenuType) {
 
         <ul className={styles.menuList}>
           {menuData.map(({ key, label, submenu }) => {
-            const hasSubmenu = Array.isArray(submenu) && submenu.length > 0
+            const hasSubmenu = Array.isArray(submenu) && submenu.length > 0;
 
             return (
               <li key={key}>
                 <button
                   className={styles.menuItem}
-                  onClick={() => handleMenuClick(key!, hasSubmenu)}
+                  onClick={() => handleMenuClick(key, hasSubmenu)}
                 >
                   <span>{label}</span>
                   {hasSubmenu && (
@@ -102,11 +95,12 @@ export function MobileMenu({ isOpen, onClose }: mobileMenuType) {
                 </button>
 
                 {openKey === key && hasSubmenu && (
-                  <ul className={styles.submenuList}>{renderSubmenu(key)}</ul>
+                  <div className={styles.submenuList}>{renderSubmenu(key)}</div>
                 )}
               </li>
-            )
+            );
           })}
+
           {/* --------------------------------------------------------------------------- */}
           {/* FORM AND LANGUAGES */}
           {/* --------------------------------------------------------------------------- */}
@@ -114,5 +108,5 @@ export function MobileMenu({ isOpen, onClose }: mobileMenuType) {
         </ul>
       </nav>
     </div>
-  )
+  );
 }
