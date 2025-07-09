@@ -1,0 +1,55 @@
+.container {
+  color: #1e1e1e;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.container p {
+  font-weight: 600;
+  line-height: 1.5;
+  color: #3f3f3f;
+  font-size: clamp(0.75rem, 4vw, 0.9rem);
+}
+.photos {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.photoWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.photoWrapper:hover .img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .photos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

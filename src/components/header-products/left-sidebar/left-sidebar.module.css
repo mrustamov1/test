@@ -1,0 +1,31 @@
+.sidebar {
+  background: #ffffff;
+  line-height: 2;
+  padding: 15px;
+  margin-top: 1rem;
+  border-radius: 12px;
+  min-width: 400px;
+  position: sticky;
+  top: 10%;
+}
+
+.hotProducts {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #eaeaea;
+  border-radius: 12px;
+  color: #3f3f3f;
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 435px) {
+  .sidebar {
+    min-width: 300px;
+  }
+}

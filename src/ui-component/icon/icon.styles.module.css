@@ -1,0 +1,12 @@
+.bg {
+  background-color: var(--icon_background);
+}
+
+i.hover:hover {
+  cursor: pointer;
+  color: #1e1e1e;
+}
+
+.danger {
+  color: var(--danger);
+}

@@ -1,0 +1,158 @@
+.content {
+  min-height: 100vh;
+  position: relative;
+}
+
+.bannerImage {
+  min-height: 100vh;
+  background: url("../../assets/images/preview-product.webp") center / cover
+    no-repeat;
+  position: relative;
+  overflow-y: auto;
+}
+
+.bannerImage::before {
+  content: "";
+  background-color: #04190acf;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.innerCard {
+  padding: 40px 1rem 0 1rem;
+  display: flex;
+  color: #fff;
+  gap: 2rem;
+  position: absolute;
+  top: 0;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+}
+
+.subImage {
+  max-width: 400px;
+  max-height: 450px;
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.subImageBottomWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.subImageBottom {
+  max-width: 70.6px;
+  max-height: 90px;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info {
+  padding: 1rem 0;
+  text-align: left;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.subTitleAndTitleDesc {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.description {
+  margin: 1rem 0;
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 5rem;
+}
+
+.button {
+  padding: 10px 45px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lastButton {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+@media (max-width: 1024px) {
+  .innerCard {
+    display: block;
+  }
+
+  .subImageBottom,
+  .subImageBottomWrapper,
+  .subImage {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .bannerImage {
+    min-height: 150vh;
+  }
+
+  .info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .bannerImage {
+    min-height: 160vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    display: block;
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .bannerImage {
+    min-height: 170vh;
+  }
+}
+
+@media (max-width: 520px) {
+  .subImageBottom {
+    max-width: 64px;
+  }
+}

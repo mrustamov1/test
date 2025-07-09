@@ -1,0 +1,88 @@
+{
+  "header": {
+    "solution": "solution",
+    "products": "products",
+    "case": "case",
+    "about": "about",
+    "customization": "customization",
+    "services": "services",
+    "contact": "contact"
+  },
+  "header-dropdown-solution": {
+    "base": "Base Station Energy Storage",
+    "pv": "PV-BESS -EV Charging",
+    "residental": "Residential Energy Storage",
+    "ic": "I&C Energy Storage",
+    "Off-grid-microgrid": "Off-grid / On-grid Microgrid",
+    "Off-grid-solution": "Off-Grid Solution",
+    "on-grid-solution": "On-Grid Solution",
+    "hybrid": "Hybrid Storage Solution"
+  },
+  "header-dropdown-products": {
+    "ic": "I&C Energy Storage Systems",
+    "base": "Base Station Energy Storage",
+    "residential": "Residential Energy Storage Systems",
+    "photovoltaic": "Photovoltaic Module",
+    "energy-storage": "Energy Storage Inverter",
+    "energy-management": "Energy Management System",
+    "customized": "Customized Products",
+    "energy-storage-accessories": "Energy Storage Accessories"
+  },
+  "station": {
+    "base": "Base Station Energy Storage",
+    "residential": "Residential Energy Storage",
+    "pv": "PV-BESS -EV Charging",
+    "ic": "I&C Energy Storage",
+    "off-grid": "Off-Grid Solution",
+    "second-base": "Base Station Energy Storage",
+    "description": "To cope with the problem of no or difficult grid access for base stations, and in line with the policy trend of energy saving and emission reduction, Huijue Group has launched an innovative base station energy solution. The solution adopts new energy (wind and diesel energy storage) technology to provide a reliable guarantee for the stable operation of communication base stations. By integrating renewable energy sources such as wind and light energy, with intelligent energy storage system and high efficiency diesel power generation as a supplement, a set of stable, efficient and green energy supply system is constructed, which can satisfy the power demand of telecommunication base stations and help the telecommunication industry to continue to develop stably in the tide of energy saving and emission reduction at the same time."
+  },
+  "button": {
+    "view-more": "VIEW MORE",
+    "more-case": "MORE PRODUCT",
+    "more": "More",
+    "find-more": "Inquire now"
+  },
+  "products": {
+    "product": "Product",
+    "description": "With our innovative technologies, strong customer focus, and a team of 1,210 dedicated employees, we power communities and drive progress. Let's create a better future today! ",
+    "first-card-title": "Rack-Mounted Battery",
+    "second-card-title": "Air-cooled I&C Distributed Energy Storage System",
+    "third-card-title": "Outdoor communication energy cabinet",
+    "fourth-card-title": "Floor-Standing Household Energy Storage System"
+  },
+  "case": {
+    "case": "Case",
+    "description": "Innovative Energy Solutions Tailored for Every Need",
+    "title": "Laos 2.5kPw Photovoltaic Energy Storage Station Solution"
+  },
+  "news": {
+    "new": "HuiJue News",
+    "description": "Explore the Latest News in Energy Storage and HuiJue",
+    "card-title": "Huijue Group helps Qingcun Town Community Elderly Canteen to be opened, and loving donations warm people’s hearts ",
+    "card-desc": "On May 21, 2025, during the Grain Full season, the Qing […]"
+  },
+  "form": {
+    "request": "Request A Quote",
+    "title": "Seamless Service Anytime You Need lt",
+    "description": " We're committed to providing prompt, professional support to ensure your energy needs are always met with the highest level of service.",
+    "support": "Reply within 24 hours",
+    "phone": "24 hours telephone support"
+  },
+  "input": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "dropdown": "Please Choose Product Type",
+    "textarea": "Your Product Requirement *",
+    "first-dropdown": {
+      "first": "Industry and Commerce Energy Storage Systems",
+      "second": "Base Station Energy Storage",
+      "third": "Residential Energy Storage Systems",
+      "fourth": "Photovoltaic Module",
+      "fifth": "Energy Storage Inverter",
+      "sixth": "Energy Management System",
+      "seventh": "Other"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.content {
+  display: flex;
+  max-height: 600px;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: url("../../../assets/images/customization-bg.jpg") center / cover
+    no-repeat;
+  background-attachment: fixed;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  z-index: 1;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  font-size: clamp(1rem, 4vw, 2rem);
+  line-height: 2.5;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.advantagesIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.iconAndDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 1rem;
+}
+.iconAndDesc:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 3rem;
+  background-color: #fff;
+}
+
+.iconAndDesc span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.icon {
+  font-weight: 400;
+  margin: 1.2rem 0;
+}
+
+@media (max-width: 1024px) {
+  .advantagesIcon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .iconAndDesc:not(:last-child)::after {
+    display: none;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .iconAndDesc span {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,93 @@
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.firstBanner {
+  width: 100%;
+  margin-top: 0;
+  z-index: 1;
+  top: 0;
+  object-fit: cover;
+  display: block;
+  max-height: 89vh;
+  transform-origin: center center;
+  animation: bannerAnimated 5s ease-in-out;
+}
+
+@keyframes bannerAnimated {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.productFilter {
+  filter: brightness(50%);
+}
+
+.bannerAndText {
+  position: relative;
+}
+
+.middleInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  text-align: center;
+}
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  width: 600px;
+  padding: 0 1rem;
+  border: none;
+  background-color: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+@keyframes bannerAnimated {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .input {
+    width: 450px;
+  }
+}
+@media (max-width: 550px) {
+  .input {
+    width: 350px;
+  }
+}
+
+@media (max-width: 450px) {
+  .input {
+    width: 250px;
+  }
+}

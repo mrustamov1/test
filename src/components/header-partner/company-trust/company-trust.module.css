@@ -1,0 +1,29 @@
+.content {
+  padding: 1rem;
+}
+
+.title {
+  font-size: clamp(1rem, 4vw, 1.7rem);
+  font-weight: 600;
+  color: #3f3f3f;
+}
+
+.lineWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  max-width: 150px;
+  background-color: var(--gen);
+  height: 4px;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.desc {
+  line-height: 2;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #3f3f3f;
+}

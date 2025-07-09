@@ -1,0 +1,11 @@
+.sidebarProductData {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  font-weight: 600;
+  background-color: #eaeaea;
+  border-top-left-radius: 25px;
+  color: #3f3f3f;
+  font-size: clamp(0.7rem, 4vw, 1rem);
+}

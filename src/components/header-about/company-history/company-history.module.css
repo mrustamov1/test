@@ -1,0 +1,110 @@
+.content {
+  background: url("../../../assets/images/history-bg.jpg") center / cover
+    no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.container {
+  color: #1e1e1e;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 2.5;
+  margin: 0 0 2rem 0;
+  font-weight: 600;
+}
+
+.wrapper {
+  display: flex;
+  text-align: left;
+  gap: 240px;
+}
+
+.secondWrapper {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  gap: 230px;
+}
+
+.history {
+  max-width: 270px;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--gen);
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #3f3f3f;
+  padding-top: 1rem;
+}
+
+.line {
+  display: flex;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 4rem 0;
+}
+
+.firstLine {
+  height: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 4rem 0;
+  display: none;
+}
+
+.topBottomWrapper {
+  display: flex;
+  overflow-x: auto;
+  flex-direction: column;
+}
+
+.scrollInner {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+}
+
+@media (max-width: 768px) {
+  .wrapper,
+  .secondWrapper {
+    flex-direction: row;
+    flex: 0 0 auto;
+    min-width: 100%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .history {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .firstLine {
+    display: flex;
+  }
+
+  .topBottomWrapper {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    gap: 1rem;
+    white-space: nowrap;
+  }
+}

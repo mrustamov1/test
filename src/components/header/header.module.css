@@ -1,0 +1,201 @@
+.content {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom: 0.1px solid #fff;
+  padding: 0 1rem;
+  box-shadow: 0px 0px 16px 0px rgb(0 0 0 / 30%);
+}
+
+.container {
+  display: flex;
+  padding: 15px 0 15px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  max-height: 2.1875rem;
+  cursor: pointer;
+}
+
+.nav {
+  position: relative;
+}
+
+.dropdownText {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  font-size: 14px;
+  font-weight: 500;
+  border-right: 2px solid green;
+  padding-right: 70px;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  gap: 1.6rem;
+}
+
+.link {
+  gap: 5px;
+  display: flex;
+  color: #1e1e1e;
+  position: relative;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  text-transform: uppercase;
+  flex-grow: 1;
+  font-weight: 600;
+  font-optical-sizing: auto !important;
+  font-size: 0.8rem;
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.link:hover::after {
+  position: absolute;
+  top: 40px;
+  content: "";
+  height: 3px;
+  width: 120%;
+  background-color: green;
+  animation: link 0.3s linear;
+}
+
+@keyframes link {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120%;
+  }
+}
+
+.search {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+}
+
+.language img {
+  max-width: 33px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.dropdownItems {
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 4rem 0;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(26, 24, 24, 0.1) inset;
+}
+
+.dropdownLang {
+  position: fixed;
+  top: 12%;
+  right: 13.8%;
+  background-color: #fff;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  border-radius: 5px;
+}
+
+.dropdownAbout {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 1rem;
+  width: 250px;
+  z-index: 20;
+  border-radius: 5px;
+}
+
+.langAndButton {
+  display: flex;
+  gap: 10px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  color: #fff;
+  font-size: 60px;
+}
+
+.slider:hover {
+  color: var(--gen);
+}
+
+.bannerIcons {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.mobileMenuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileMenuList li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.mobileDropdown {
+  padding-left: 1rem;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #1e1e1e;
+  display: flex;
+}
+
+.searchIcon {
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.searchIcon:hover {
+  transform: rotate(360deg);
+}

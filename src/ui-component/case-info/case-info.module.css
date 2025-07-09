@@ -1,0 +1,20 @@
+.info {
+  margin: 1.5rem 0;
+}
+
+.infoTitle {
+  background: var(--gen);
+  color: #fff;
+  padding: 2px 15px;
+  display: inline-block;
+  border-radius: 0px 15px;
+  font-weight: bolder;
+  line-height: 2;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.infoDesc {
+  font-size: 0.9rem;
+  color: #1e1e1e;
+  line-height: 1.5;
+}

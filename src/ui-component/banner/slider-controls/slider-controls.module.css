@@ -1,0 +1,19 @@
+.slider {
+  color: #fff;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.slider:hover {
+  color: var(--gen);
+}
+
+.bannerIcons {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: clamp(1rem, 4vw, 6rem);
+  padding-right: clamp(1rem, 4vw, 6rem);
+}

@@ -1,0 +1,42 @@
+.rightSidebar h3 {
+  color: #1e1e1e;
+  font-weight: 600 !important;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.rightSidebarDesc {
+  color: #1e1e1e;
+  font-size: 14px;
+  padding-top: 8px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.rightSidebar {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 15px;
+  margin-top: 1rem;
+  border-radius: 12px;
+  display: flex;
+  padding: 1rem;
+}
+
+.productCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .productCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .productCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,15 @@
+.sidebarProduct {
+  padding: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border-radius: 12px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.sidebarProduct:hover {
+  background-color: var(--gen);
+  color: #fff;
+}
