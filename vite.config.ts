@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     host: true,
     strictPort: true,
-    port: Number(process.env.VITE_API_URL) | 3010,
+    port: Number(process.env.VITE_API_URL) | 3009,
   },
 });

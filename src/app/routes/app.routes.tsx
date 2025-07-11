@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Contact } from "../../components/contact/conact.component";
-import { AllProducts } from "../../components/header/products.comonent";
+import { AllProducts } from "../../components/header-products/products.comonent";
 import { HomePage } from "../../components/home-page/home-page.component";
 import { HeaderCase } from "../../components/header-case/header-case.component";
 import { HeaderBlog } from "../../components/header-blog/header-blog.component";
