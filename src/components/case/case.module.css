@@ -1,5 +1,6 @@
 .content {
   background: url("../../assets/images/casesimg.jpg") center / cover no-repeat;
+  padding: 0 1rem;
 }
 
 .wrapper {

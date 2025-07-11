@@ -82,8 +82,4 @@
   .cards {
     grid-template-columns: repeat(1, 1fr);
   }
-  .content {
-    display: grid;
-    gap: 4rem;
-  }
 }

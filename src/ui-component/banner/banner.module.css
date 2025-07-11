@@ -84,6 +84,11 @@
   .input {
     width: 350px;
   }
+
+  .firstBanner {
+    max-height: 50vh;
+    height: 100vh;
+  }
 }
 
 @media (max-width: 450px) {
