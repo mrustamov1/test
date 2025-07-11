@@ -1,5 +1,6 @@
 .content {
-  background: url("../../../assets/images/history-bg.jpg") center / cover no-repeat;
+  background: url("../../../assets/images/history-bg.jpg") center / cover
+    no-repeat;
   background-attachment: fixed;
   padding: 4rem 5rem;
   position: relative;
@@ -102,6 +103,10 @@ h2 {
 @media (max-width: 768px) {
   .timeline {
     padding: 0;
+  }
+
+  .content {
+    padding: 4rem 0;
   }
 
   .line {
