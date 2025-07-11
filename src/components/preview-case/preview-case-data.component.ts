@@ -8,7 +8,6 @@ export const casesData = [
     icon: "fa-light fa-location-dot",
     location: "Laos",
     overlayTitle: "500Ah 2.5kPw",
-    description: "Detailed info about Laos 2.5kPw photovoltaic solution...",
   },
   {
     id: "2",
@@ -17,7 +16,6 @@ export const casesData = [
     icon: "fa-light fa-location-dot",
     location: "Country 2",
     overlayTitle: "Details 2",
-    description: "Detailed info about case 2...",
   },
   {
     id: "3",
@@ -26,18 +24,5 @@ export const casesData = [
     icon: "fa-light fa-location-dot",
     location: "Country 2",
     overlayTitle: "Details 2",
-    description: "Detailed info about case 2...",
-  },
-]
-
-export const detailedCases = [
-  {
-    id: "1",
-    image: images.headerCase1,
-    title: "Laos 2.5kPw Photovoltaic Energy Storage Station Solution",
-    icon: "fa-light fa-location-dot",
-    location: "Laos",
-    overlayTitle: "500Ah 2.5kPw",
-    description: "Detailed info about Laos 2.5kPw photovoltaic solution...",
   },
 ]

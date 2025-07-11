@@ -1,7 +1,3 @@
-import {
-  detailedInfoProducts,
-  productsData,
-} from "./preview-products-data.component"
 import { images } from "../../assets/images"
 import styles from "./preview-products.module.css"
 import { Link, useParams } from "react-router-dom"
@@ -9,14 +5,15 @@ import { Feature } from "./feature/feature.component"
 import { useSkeleton } from "../../context/skeleton.context"
 import { Case } from "../../ui-component/case/case.component"
 import { Parameters } from "./parameters/parameters.component"
+import { productsData } from "./preview-products-data.component"
+import { Application } from "./application/application.component"
 import { Scroll } from "../../ui-component/scroll/scroll.component"
 import { PreviewProductSolutions } from "./solutions/solutions.component"
 import { Container } from "../../ui-component/container/container.component"
 import { Square } from "../../ui-component/products/square/square.component"
 import { CardSkeleton } from "../../ui-component/skeletons/card-skeleton.component"
-import { UiPreviewProducts } from "../../ui-component/preview-product/preview-product.component"
-import { Application } from "./application/application.component"
 import { RequestQuote } from "../../ui-component/request-quote/request-quote.component"
+import { UiPreviewProducts } from "../../ui-component/preview-product/preview-product.component"
 
 export function PreviewProducts() {
   // ---------------------------------------------------------------------------
@@ -24,7 +21,7 @@ export function PreviewProducts() {
   // ---------------------------------------------------------------------------
   const { id } = useParams()
   const { isLoading } = useSkeleton()
-  const caseDetail = detailedInfoProducts.find((c) => c.id === id)
+  const caseDetail = productsData.find((c) => c.id === id)
 
   if (!caseDetail) return <p>Case not found</p>
 

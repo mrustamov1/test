@@ -2,6 +2,7 @@ import { useState } from "react"
 import styles from "./stations.module.css"
 import { images } from "../../assets/images"
 import { useTranslation } from "react-i18next"
+import { useNavigate } from "react-router-dom"
 import { Icon } from "../../ui-component/icon/icon.component"
 import { Container } from "../../ui-component/container/container.component"
 
@@ -9,6 +10,7 @@ export function Stations() {
   // ---------------------------------------------------------------------------
   // variables
   // ---------------------------------------------------------------------------
+  const navigate = useNavigate()
   const { t: translate } = useTranslation()
   const [hoveredIndex, setHoveredIndex] = useState(0)
 
@@ -76,10 +78,7 @@ export function Stations() {
         </div>
 
         <article className={styles.stationInfo}>
-          <div
-            key={hoveredIndex} // key forces re-mount, triggering animation
-            className={styles.slideWrapper}
-          >
+          <div key={hoveredIndex} className={styles.slideWrapper}>
             <img
               className={styles.photo}
               src={data[hoveredIndex].image}
@@ -90,7 +89,10 @@ export function Stations() {
                 <h1 className={styles.title}>{data[hoveredIndex].title}</h1>
                 <p>{data[hoveredIndex].description}</p>
               </div>
-              <span className={styles.viewMore}>
+              <span
+                onClick={() => navigate("/solutions/base-station-energy")}
+                className={styles.viewMore}
+              >
                 {translate("button.view-more")}
                 <Icon
                   name="fa-light fa-arrow-right-long"

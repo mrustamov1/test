@@ -4,11 +4,13 @@ import { useTranslation } from "react-i18next"
 import { News } from "../../ui-component/news/news.component"
 import { Button } from "../../ui-component/button/button.component"
 import { Container } from "../../ui-component/container/container.component"
+import { useNavigate } from "react-router-dom"
 
 export function MainNews() {
   // ---------------------------------------------------------------------------
   // variables
   // ---------------------------------------------------------------------------
+  const navigate = useNavigate()
   const { t: translate } = useTranslation()
 
   // ---------------------------------------------------------------------------
@@ -24,6 +26,7 @@ export function MainNews() {
                 title={translate("button.view-more")}
                 iconName="fa-solid fa-chevron-right"
                 titleSize="medium"
+                onClick={() => navigate("/news")}
               />
             </div>
           </div>

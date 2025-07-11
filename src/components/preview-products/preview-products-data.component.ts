@@ -28,16 +28,13 @@ export const productsData = [
     overlayTitle: "Details 2",
     description: "Detailed info about case 2...",
   },
-]
-
-export const detailedInfoProducts = [
   {
-    id: "1",
-    image: images.headerCase1,
-    title: "Laos 2.5kPw Photovoltaic Energy Storage Station Solution",
+    id: "4",
+    image: images.offGridOngrid,
+    title: "Case 2 title here",
     icon: "fa-light fa-location-dot",
-    location: "Laos",
-    overlayTitle: "500Ah 2.5kPw",
-    description: "Detailed info about Laos 2.5kPw photovoltaic solution...",
+    location: "Country 2",
+    overlayTitle: "Details 2",
+    description: "Detailed info about case 2...",
   },
 ]

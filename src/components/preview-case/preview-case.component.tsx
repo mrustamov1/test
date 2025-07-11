@@ -1,12 +1,12 @@
-import styles from "./preview-case.module.css"
 import { images } from "../../assets/images"
+import styles from "./preview-case.module.css"
 import { Link, useParams } from "react-router-dom"
+import { casesData } from "./preview-case-data.component"
 import { useSkeleton } from "../../context/skeleton.context"
 import { Case } from "../../ui-component/case/case.component"
 import { Icon } from "../../ui-component/icon/icon.component"
 import { Banner } from "../../ui-component/banner/banner.component"
 import { Scroll } from "../../ui-component/scroll/scroll.component"
-import { casesData, detailedCases } from "./preview-case-data.component"
 import { CaseInfo } from "../../ui-component/case-info/case-info.component"
 import { Container } from "../../ui-component/container/container.component"
 import { CardSkeleton } from "../../ui-component/skeletons/card-skeleton.component"
@@ -18,7 +18,7 @@ export function PreviewCases() {
   // ---------------------------------------------------------------------------
   const { id } = useParams()
   const { isLoading } = useSkeleton()
-  const caseDetail = detailedCases.find((c) => c.id === id)
+  const caseDetail = casesData.find((c) => c.id === id)
 
   if (!caseDetail) return <p>Case not found</p>
 
@@ -78,7 +78,7 @@ export function PreviewCases() {
         {/* --------------------------------------------------------------------------- */}
         {/* RELATED CASES */}
         {/* --------------------------------------------------------------------------- */}
-        s<h4 className={styles.title}>Related Cases</h4>
+        <h4 className={styles.title}>Related Cases</h4>
         <Scroll>
           {isLoading ? (
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>

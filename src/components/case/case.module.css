@@ -20,7 +20,7 @@
 .cases {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
   gap: 0.5rem;
   text-align: left;
   overflow-x: auto;
